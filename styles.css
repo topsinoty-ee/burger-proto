@@ -1,0 +1,184 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('/fonts.css');
+
+body {
+  /* background-image: linear-gradient(
+    to right,
+    #6633cc,
+    #6600cc,
+    #cc00ff,
+    #ff33ff,
+    #ff66cc,
+    #ff9999
+  ); */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: normal;
+}
+.wrapper {
+  @apply w-full p-6 flex flex-col gap-10;
+}
+.header {
+  @apply w-full max-h-12 h-12 flex place-items-center place-content-center;
+}
+
+.navbar {
+  @apply w-full flex h-full place-items-center place-content-between;
+}
+
+div:has(.logo),
+.logo {
+  @apply h-full;
+}
+
+.logo {
+  @apply rounded-lg;
+}
+
+.navigation {
+  @apply max-w-[90%] w-full;
+}
+.navigation > ol {
+  @apply flex w-full place-content-evenly space-x-2;
+}
+
+.navigation > ol > li {
+  @apply bg-yellow flex-grow px-4 py-3 flex place-content-center place-items-center rounded-lg border border-blue;
+}
+
+.navigation > ol > li > a {
+  @apply text-center place-content-center place-items-center flex text-xl group-hover:bg-slate-200;
+}
+
+main {
+  @apply flex flex-col gap-10;
+}
+
+.section,
+section {
+  @apply w-full flex max-h-[512px] h-[90vh];
+}
+
+.prices-col {
+  @apply flex-grow h-full flex flex-col justify-between gap-5;
+}
+.price-container {
+  @apply flex-grow flex place-items-center place-content-center flex-col border-2 border-r-4 border-b-4 border-blue rounded-xl space-y-6;
+}
+
+.burger-name {
+  @apply text-3xl font-sans text-brown;
+}
+
+.burger-price {
+  @apply text-6xl font-abys text-green;
+}
+.burger-price::after {
+  content: '€';
+  padding-left: 10px;
+}
+
+.section:has(.icon-box) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  @apply flex justify-between h-80;
+}
+
+.icon-box {
+  @apply border-2 border-r-4 border-b-4 border-blue rounded-xl flex-grow flex flex-col overflow-hidden p-3 first:p-0;
+}
+
+.icon-box > img {
+  @apply max-h-52;
+}
+
+.icon {
+}
+
+.icon-text {
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.section:has(.about-container) {
+  @apply border-2 border-r-4 border-b-4 border-blue rounded-xl overflow-hidden;
+}
+
+.section:has(.about-container) img {
+  @apply object-cover h-72 w-full opacity-75;
+}
+
+div.about-container > div > * {
+  @apply text-center text-lg p-3;
+}
+
+div.about-container > div {
+  @apply px-32;
+}
+
+.fourth-div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.fourth-pic {
+  width: 100%;
+  height: 400px;
+}
+
+.fourth-text {
+  width: 60%;
+  height: 400px;
+  color: black;
+  justify-content: center;
+}
+
+.fourth-header {
+  height: 30px;
+  width: 100%;
+  display: block;
+}
+
+.section:has(.dwpic) {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+
+  @apply h-full
+}
+
+.dwpic{
+  @apply h-full aspect-square
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
