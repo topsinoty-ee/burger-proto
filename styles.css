@@ -21,10 +21,10 @@ body {
   font-style: normal;
 }
 .wrapper {
-  @apply w-full p-6 flex flex-col gap-10;
+  @apply w-full p-6 flex flex-col gap-10 bg-slate-400;
 }
 .header {
-  @apply w-full max-h-12 h-12 flex place-items-center place-content-center;
+  @apply w-full max-h-12 h-12 flex place-items-center place-content-center bg-brown rounded-xl sticky z-[999px] top-2 opacity-100;
 }
 
 .navbar {
@@ -165,6 +165,14 @@ div.about-container > div {
 
 .dwpic{
   @apply h-full aspect-square
+}
+
+footer{
+  @apply px-4 py-2 bg-black text-white 
+}
+
+footer a{
+  @apply text-yellow;
 }
 
 ::-webkit-scrollbar {
